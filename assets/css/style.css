@@ -265,10 +265,10 @@ section h2 {
   }
 }
 
-/* --- nav: no name, links sit left --- */
-.nav__inner { justify-content: flex-start; }
-.nav__links { margin-left: auto; }
-@media (max-width: 760px) { .nav__links { margin-left: 0; } }
+/* --- nav: no name, links centred --- */
+.nav__inner { justify-content: center; }
+.nav__links { margin: 0 auto; justify-content: center; }
+@media (max-width: 760px) { .nav__links { margin: 0; } }
 
 /* --- section headings get a colour accent --- */
 section h2 {
