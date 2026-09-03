@@ -1,58 +1,40 @@
 # ankithasudarshan.github.io
 
-Personal academic website — a single static HTML page, no build step, no framework.
-Styled after minimal PhD sites (Minimal Light / academic single-page).
+Personal academic website: a single static HTML page, no build step, no framework.
+Styled after minimal PhD sites.
 
 ```
-index.html              all content lives here — edit this to update the site
+index.html              all content lives here, edit this to update the site
 assets/css/style.css    styling (light + dark, responsive)
 assets/js/main.js        mobile nav, "show more" news, section highlight
-assets/img/             profile photo, publication thumbnails, favicon
+assets/img/             profile photo, publication thumbnails, favicon, badges
 assets/pdf/             CV
 ```
 
-## Deploy (one time)
+Deployed as a GitHub Pages user site at **https://ankithasudarshan.github.io/**
+(source: `main` branch, `/` root). Every push updates it.
+Preview locally: open `index.html`, or run `python -m http.server` in this folder.
 
-1. Create a **public** repo named exactly **`ankithasudarshan.github.io`** on GitHub
-   (empty — no README/license). The name must match your username; that makes it a
-   *user site* served at `https://ankithasudarshan.github.io/`.
-2. From this folder:
-   ```bash
-   git init
-   git add -A
-   git commit -m "Personal website"
-   git branch -M main
-   git remote add origin https://github.com/ankithasudarshan/ankithasudarshan.github.io.git
-   git push -u origin main
-   ```
-3. Repo → **Settings → Pages** → Source: **Deploy from a branch** → Branch: `main` / `/ (root)` → Save.
-4. Live in ~1 minute at `https://ankithasudarshan.github.io/`. Every push updates it.
+## Placeholders still to fill
 
-Preview locally: just open `index.html` in a browser, or `python -m http.server` in this folder.
+Search `index.html` for `data-needs`:
 
-## What still needs your input
-
-Search `index.html` for `data-needs="..."` — every link marked that way is a placeholder:
-
-| Placeholder | What to put |
+| marker | what to do |
 |---|---|
-| `data-needs="scholar"` | Your Google Scholar profile URL (or delete these `<li>`/links if you don't have one yet) |
-| `data-needs="linkedin"` | Your LinkedIn profile URL |
-| `data-needs="link"` (in publications) | arXiv / PDF / OpenReview links as papers go public |
+| `data-needs="visitor-globe"` | Get a free 3D globe embed from <https://www.revolvermaps.com/> and replace the placeholder `<script src="//rf.revolvermaps.com/...i=PLACEHOLDER...">` in the `#visitors` section with the real one. |
+| `data-needs="link"` (x2) | On `#pub-transition` and `#pub-motionrepr`, swap `paper soon` for the arXiv / OpenReview link once each paper is public. |
 
-Also:
-- **Profile photo** — drop a square headshot at `assets/img/profile.jpg` and change
-  `assets/img/profile.svg` → `assets/img/profile.jpg` in `index.html` (one line in the hero).
-- **Publication thumbnails** — `pub-transition`, `pub-rhythm`, `pub-asr`, `pub-patent` use
-  text placeholders. Add a teaser image to `assets/img/` and swap the
-  `<div class="pub__thumb pub__thumb--placeholder">…</div>` for
-  `<div class="pub__thumb"><img src="assets/img/xxx.webp" alt="…" loading="lazy"></div>`.
-- **News dates** — I approximated years from your CV. Correct any that are wrong, and add
-  new items at the top of the `<ul class="news">` list.
-- **CV** — `assets/pdf/Ankitha_Sudarshan_CV.pdf` is a copy of your résumé; replace it
-  whenever you update the real one.
+Nice-to-have later:
+- Real teaser images for `#pub-transition`, `#pub-rhythm`, `#pub-patent` (currently
+  clean text tiles). Add to `assets/img/` and replace the
+  `<div class="pub__thumb pub__thumb--placeholder">...</div>` with
+  `<div class="pub__thumb"><img src="assets/img/xxx.webp" alt="..." loading="lazy"></div>`.
+- Replace `assets/pdf/Ankitha_Sudarshan_CV.pdf` whenever the CV changes.
 
 ## Adding a publication
 
-Copy one `<li class="pub" id="…">` block in `index.html`, change the id, title, authors
-(keep your name in `<strong>`), venue, blurb, and links. Newest first.
+Copy an `<li class="pub" id="...">` block in `index.html`, change the id / title /
+authors (keep your name in `<strong>`) / venue / blurb / links. Newest first.
+Use `<span class="hl">...</span>` to highlight a key result, and the
+`<span class="tag">under review</span>` chip for unaccepted work.
+No em dashes anywhere: use commas, hyphens, or "&middot;".

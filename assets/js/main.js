@@ -1,4 +1,4 @@
-/* Ankitha Sudarshan — personal site. Vanilla JS, no dependencies. */
+/* Ankitha Sudarshan - personal site. Vanilla JS, no dependencies. */
 (function () {
   "use strict";
 

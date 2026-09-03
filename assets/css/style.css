@@ -1,5 +1,5 @@
 /* ============================================================
-   Ankitha Sudarshan — personal site
+   Ankitha Sudarshan - personal site
    Plain static CSS. No build step.
    ============================================================ */
 
@@ -246,3 +246,107 @@ section h2 {
   a { color: var(--ink); text-decoration: none; }
   .news li.is-hidden { display: flex; }
 }
+
+/* ============================================================
+   v2 additions: color, highlight, restructured header,
+   badges in timeline, patent subhead, visitor globe.
+   ============================================================ */
+
+:root {
+  --hl-bg:   #fff2c2;   /* highlighter yellow */
+  --hl-ink:  #5a4a12;
+  --accent2: #b5451b;   /* warm secondary accent */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hl-bg:  #4a3f18;
+    --hl-ink: #f4e4b8;
+    --accent2: #e0895f;
+  }
+}
+
+/* --- nav: no name, links sit left --- */
+.nav__inner { justify-content: flex-start; }
+.nav__links { margin-left: auto; }
+@media (max-width: 760px) { .nav__links { margin-left: 0; } }
+
+/* --- section headings get a colour accent --- */
+section h2 {
+  color: var(--accent);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* --- highlight key phrases --- */
+.hl {
+  background: linear-gradient(transparent 58%, var(--hl-bg) 58%);
+  color: inherit;
+  padding: 0 1px;
+  font-weight: 500;
+}
+@media (prefers-color-scheme: dark) {
+  .hl { background: var(--hl-bg); color: var(--hl-ink); border-radius: 2px; }
+}
+
+/* --- identity block --- */
+.hero__title--sub { font-size: 14px; color: var(--muted); margin-top: -4px; }
+.hero { padding-top: 44px; }
+
+/* --- standalone callout under the header --- */
+.callout {
+  margin: 6px 0 4px;
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+  font-size: 15.5px;
+}
+.callout strong { color: var(--accent-ink); }
+
+.section-lead--muted { color: var(--muted); margin-top: -10px; }
+
+/* --- publications: patent subhead --- */
+.pubs__subhead {
+  font-size: 15px;
+  margin: 26px 0 4px;
+  color: var(--accent2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* --- timeline: badge + text --- */
+.timeline li { grid-template-columns: 118px 1fr; }
+.timeline__what { display: flex; gap: 14px; align-items: flex-start; }
+.timeline__badge {
+  flex-shrink: 0;
+  width: 40px; height: 40px; border-radius: 9px;
+  background: var(--b, var(--accent));
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; font-weight: 500; letter-spacing: .02em;
+  margin-top: 1px;
+}
+@media (max-width: 760px) {
+  .timeline__what { gap: 12px; }
+}
+
+/* --- awards: service block --- */
+.awards__service { font-size: 15px; margin: 22px 0 8px; color: var(--accent); }
+
+/* --- visitors / globe --- */
+.visitors { text-align: left; }
+.visitors__globe {
+  min-height: 200px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--bg-soft);
+}
+.visitors__note { margin: 0; font-size: 13px; color: var(--muted); text-align: center; max-width: 40ch; }
+
+/* --- footer --- */
+.foot__links a { color: var(--ink-soft); font-weight: 500; }
+.foot__links a:hover { color: var(--accent); }
