@@ -457,3 +457,13 @@ a.award__title:hover { color: var(--accent); text-decoration: none; }
 }
 
 .foot__fine { font-size: 13px !important; color: var(--muted) !important; }
+
+/* v7: research statement reads as body prose, not a muted lead */
+.research-lead {
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 68ch;
+}
+.research-lead .hl { font-weight: 600; }
