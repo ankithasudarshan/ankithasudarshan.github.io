@@ -400,3 +400,21 @@ a.award__title:hover { color: var(--accent); text-decoration: none; }
 @media (max-width: 760px) {
   .award-cards { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   v4: real paper thumbnails, compact timeline, service section
+   ============================================================ */
+
+/* compact timeline (icons + role + org only, no long notes) */
+.timeline--compact li { padding: 11px 0; }
+.timeline--compact .timeline__what { align-items: center; }
+.timeline--compact .timeline__role { margin-bottom: 1px; }
+.timeline--compact .timeline__org { margin: 0; }
+
+/* a thumbnail that should show the whole image (e.g. an app icon) */
+.pub__thumb--contain { background: var(--bg-soft); }
+.pub__thumb--contain img { object-fit: contain; padding: 8px; }
+
+/* Academic Service: match the body sizing of other sections */
+#service .plain li { font-size: 15px; color: var(--ink-soft); padding: 6px 0; }
+#service .plain strong { color: var(--ink); }

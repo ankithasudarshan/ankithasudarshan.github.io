@@ -2,6 +2,7 @@
 Thumbs.db
 .vscode/
 
-AnkithaSudarshan_Resume_PhD_old.docx
-
-*.docx
+# scratch / source drops in the repo root (assets/ stays tracked)
+/*.docx
+/*.jpeg
+/*.jpg

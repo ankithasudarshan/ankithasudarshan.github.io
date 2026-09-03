@@ -34,6 +34,7 @@
       <a href="#ventures">Ventures</a>
       <a href="#experience">Experience</a>
       <a href="#awards">Awards</a>
+      <a href="#service">Service</a>
     </nav>
   </div>
 </header>
@@ -85,7 +86,7 @@
       meant releasing the largest 3D dataset of its kind
       (<a href="#pub-f2f">Footwork2Framework</a>), a reference-based measure for motion transitions
       (<a href="#pub-transition">Transition Correctness</a>), and, from earlier work in video
-      understanding, an <a href="#ventures">India patent</a>.
+      understanding, a <a href="#ventures">granted India patent</a>.
     </p>
     <div class="themes">
       <div class="theme">
@@ -126,6 +127,7 @@
       <li><span class="news__date">2026</span><span class="news__item">Submitted <em>&ldquo;Investigating Fine-Grained Structure in Discrete 3D Human Motion Representations&rdquo;</em> to 3DV&nbsp;2027.</span></li>
       <li><span class="news__date">2025</span><span class="news__item"><em>&ldquo;Low-Resource Rhythm Learning of South Asian Beat Structures&rdquo;</em> published at the <strong>AAAI&nbsp;2026</strong> Workshop on Emerging AI Technologies for Music; its abstract was first accepted at the <strong>NeurIPS&nbsp;2025</strong> Women in Machine Learning Workshop.</span></li>
       <li><span class="news__date">2025</span><span class="news__item">Released the <a href="https://ankithasudarshan.github.io/Footwork2Framework/" target="_blank" rel="noopener">Footwork2Framework</a> dataset and generative framework; submitted to WACV&nbsp;2027.</span></li>
+      <li><span class="news__date">2025</span><span class="news__item">India patent <strong>567962</strong> granted for <em>&ldquo;System and Method for Image Analysis and Summarization&rdquo;</em> (<a href="#ventures">details</a>).</span></li>
       <li><span class="news__date">2024</span><span class="news__item">Started my PhD in Computer Science at the University at Buffalo.</span></li>
       <li><span class="news__date">2024</span><span class="news__item">Won the <strong>Dean&rsquo;s Choice Award</strong> for Best Poster at the Purdue Research Symposium.</span></li>
       <li><span class="news__date">2024</span><span class="news__item">Completed my MS in Computer Science at Purdue University.</span></li>
@@ -151,12 +153,10 @@
           <p class="pub__authors"><strong>Ankitha Sudarshan</strong><span class="eq">*</span>, Lipisha Nitin Chaudhary<span class="eq">*</span>, Tanvi Ranga, Ifeoma Nwogu, Rohini Srihari</p>
           <p class="pub__venue"><span class="tag">under review</span> WACV 2027</p>
           <p class="pub__blurb">
-            The first 3D motion dataset with synchronized full-body and hand mesh annotations
-            (1,910 clips, roughly 47,750&nbsp;s, about 2.5&times; the size of AIST++), plus a
-            VQ-VAE generation framework conditioned on motion and audio, with bidirectional
-            audio-motion alignment and appearance retargeting for avatar synthesis. An
-            <span class="hl">earlier version</span> appeared at the Sustainable Databases in the
-            Humanities workshop, 2025.
+            The <span class="hl">largest 3D dance-motion dataset</span> with synchronized full-body
+            and hand meshes (1,910 clips, about 2.5&times; AIST++), plus a VQ-VAE model that
+            generates expressive motion from audio. An earlier version appeared at the Sustainable
+            Databases in the Humanities workshop, 2025.
           </p>
           <p class="pub__links">
             <a href="https://ankithasudarshan.github.io/Footwork2Framework/" target="_blank" rel="noopener">project&nbsp;page</a>
@@ -169,64 +169,61 @@
         <div class="pub__thumb pub__thumb--placeholder"><span>Transition<br>Correctness</span></div>
         <div class="pub__meta">
           <p class="pub__title">Transition Correctness: A Reference-Based Measure for Path and Timing Fidelity in Fine-Grained Motion</p>
-          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, et&nbsp;al.</p>
+          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, Lipisha Nitin Chaudhary, Ifeoma Nwogu, Rohini Srihari</p>
           <p class="pub__venue"><span class="tag">under review</span> ICLR 2027</p>
           <p class="pub__blurb">
-            A three-stage, reference-based measure that scores motion transitions in a unified
-            joint-angle space: an anatomical-feasibility gate, path correctness against an expert
-            reference corridor, and timing correctness that separates
-            <span class="hl">spatial error from pacing error</span>. Needs only two or three expert
-            demonstrations and no error-labelled training data; validated on dance, surgical
-            kinematics, and sign language.
+            A way to score how well a generated motion transitions between poses, checking
+            anatomical plausibility, the path through pose space, and timing, and
+            <span class="hl">telling spatial errors apart from pacing errors</span>. Works from
+            two or three expert clips, no labelled mistakes needed.
           </p>
           <p class="pub__links"><a class="disabled" data-needs="link">paper soon</a></p>
         </div>
       </li>
 
       <li class="pub" id="pub-motionrepr">
-        <div class="pub__thumb"><img src="assets/img/pub-motionrepr.webp" alt="Discrete 3D human motion representations" loading="lazy"></div>
+        <div class="pub__thumb"><img src="assets/img/pub-motionrepr.webp" alt="3D mesh poses from the adavu gallery" loading="lazy"></div>
         <div class="pub__meta">
           <p class="pub__title">Investigating Fine-Grained Structure in Discrete 3D Human Motion Representations</p>
-          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, et&nbsp;al.</p>
+          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, Lipisha Nitin Chaudhary, Ifeoma Nwogu, Rohini Srihari</p>
           <p class="pub__venue"><span class="tag">under review</span> 3DV 2027</p>
           <p class="pub__blurb">
-            Trains a VQ-VAE on 3D body and articulated-hand motion with no category or performer
-            labels, then probes what the codebook learns. Body tokens recover movement category
-            well above a majority baseline; hand-only tokens carry more performer-specific
-            information, evidence that reconstruction-only objectives
-            <span class="hl">implicitly encode category structure</span>.
+            A VQ-VAE trained on body and hand motion with no labels still learns tokens that
+            <span class="hl">separate the dance moves</span>. Body tokens carry the movement
+            category; hand tokens carry who is dancing.
           </p>
           <p class="pub__links"><a class="disabled" data-needs="link">paper soon</a></p>
         </div>
       </li>
 
       <li class="pub" id="pub-rhythm">
-        <div class="pub__thumb pub__thumb--placeholder"><span>Rhythm<br>Learning</span></div>
+        <div class="pub__thumb"><img src="assets/img/pub-rhythm.webp" alt="Nattuvangam sollkattu rendered across tempos" loading="lazy"></div>
         <div class="pub__meta">
           <p class="pub__title">Low-Resource Rhythm Learning of South Asian Beat Structures: Machine Learning Approaches to Nattuvangam</p>
-          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, A.&nbsp;V.&nbsp;Jadhav, Rohini Srihari</p>
+          <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, Atharva Vikas Jadhav, Rohini Srihari</p>
           <p class="pub__venue"><a href="https://www.aaai.org/" target="_blank" rel="noopener">AAAI 2026</a> Workshop on Emerging AI Technologies for Music (PMLR) &nbsp;&middot;&nbsp; abstract at the <a href="https://neurips.cc/" target="_blank" rel="noopener">NeurIPS 2025</a> Women in ML Workshop</p>
           <p class="pub__blurb">
-            The first annotated structured-beat dataset for South Asian music (31,560&nbsp;s,
-            7 classes). A hybrid MFCC + CLAP model reaches <span class="hl">76.2% accuracy</span>
-            (F1 0.73) over a 69.8% baseline, with zero-shot transfer to rare classes under 30:1
-            class imbalance.
+            A first labelled dataset of South Asian dance rhythm (nattuvangam), and a model that
+            recognises the rhythmic cycle at <span class="hl">76.2% accuracy</span> from very
+            little data, transferring zero-shot to rare cycles.
           </p>
-          <p class="pub__links"><a href="https://scholar.google.com/citations?user=l9nZzx4AAAAJ&amp;hl=en" target="_blank" rel="noopener">scholar</a></p>
+          <p class="pub__links">
+            <a href="assets/pdf/AAAI26_LowResourceRhythm_Poster.pdf" target="_blank" rel="noopener">poster</a>
+            <a href="https://scholar.google.com/citations?user=l9nZzx4AAAAJ&amp;hl=en" target="_blank" rel="noopener">scholar</a>
+          </p>
         </div>
       </li>
 
       <li class="pub" id="pub-asr">
-        <div class="pub__thumb"><img src="assets/img/pub-asr.webp" alt="Semantic lattice rescoring ASR pipeline" loading="lazy"></div>
+        <div class="pub__thumb"><img src="assets/img/pub-asr.webp" alt="ASR word lattice from the paper" loading="lazy"></div>
         <div class="pub__meta">
           <p class="pub__title"><a href="https://arxiv.org/abs/2310.09680" target="_blank" rel="noopener">Improved Contextual Recognition in Automatic Speech Recognition Systems by Semantic Lattice Rescoring</a></p>
           <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, Vinay Samuel, Parth Patwa, Ibtihel Amara, Aman Chadha</p>
           <p class="pub__venue"><a href="https://arxiv.org/abs/2310.09680" target="_blank" rel="noopener">arXiv:2310.09680</a>, 2023 &nbsp;&middot;&nbsp; Purdue University</p>
           <p class="pub__blurb">
-            A transformer-based rescoring step over the ASR word lattice, on top of an HMM-GMM + DNN
-            pipeline. Cuts word error rate by <span class="hl">14.88% after rescoring</span> and by
-            1.36% against comparable systems on LibriSpeech. I framed the problem and led a
-            five-person international team.
+            Re-ranking the speech recogniser's word lattice with a transformer that understands
+            meaning, which <span class="hl">cuts word error rate by 14.88%</span> on LibriSpeech.
+            I framed the problem and led a five-person team.
           </p>
           <p class="pub__links"><a href="https://arxiv.org/abs/2310.09680" target="_blank" rel="noopener">arXiv</a></p>
         </div>
@@ -249,33 +246,33 @@
     <ol class="pubs">
 
       <li class="pub" id="venture-cctv">
-        <div class="pub__thumb pub__thumb--placeholder"><span>India&nbsp;Patent<br>201941033734</span></div>
+        <div class="pub__thumb"><img src="assets/img/venture-patent.webp" alt="Indian patent certificate 567962" loading="lazy"></div>
         <div class="pub__meta">
           <p class="pub__title">Emotion Recognition for CCTV Surveillance and Video Summarization</p>
           <p class="pub__authors">Raksha Harish, <strong>Ankitha Sudarshan</strong>, Namitha Guruprasad &nbsp;&middot;&nbsp; mentor: Dr. Sejal S. Nimbhorkar</p>
-          <p class="pub__venue"><span class="tag">patent</span> India Patent Application 201941033734, filed 2019 &nbsp;&middot;&nbsp; <em>System and Method for Image Analysis and Summarization</em></p>
+          <p class="pub__venue"><span class="tag">granted patent</span> India Patent <strong>567962</strong>, granted 2025 (application 201941033734, filed 2019) &nbsp;&middot;&nbsp; <em>System and Method for Image Analysis and Summarization</em></p>
           <p class="pub__blurb">
-            A four-module system (recognition, detection, alerting, summarization) built with
-            OpenPose, Viola-Jones, and clustering that cuts the time to summarize a surveillance
-            video to roughly <span class="hl">one-fifth</span> of the original. Semi-finalist at
-            <a href="https://www.sih.gov.in/" target="_blank" rel="noopener">Smart India Hackathon 2019</a>,
-            and among the <span class="hl">top 5% of startup ideas in Karnataka</span> at the
-            FKCCI Manthan venture programme (2020).
+            A four-part system that watches CCTV footage, flags events, and produces a short summary
+            video in about <span class="hl">one-fifth</span> of the usual time. Semi-finalist at
+            <a href="https://www.sih.gov.in/" target="_blank" rel="noopener">Smart India Hackathon 2019</a>
+            and in the <span class="hl">top 5% of startup ideas in Karnataka</span> (FKCCI Manthan, 2020).
           </p>
-          <p class="pub__links"><a href="https://www.bnmit.org/newgen-iedc/" target="_blank" rel="noopener">NewGen-IEDC listing</a></p>
+          <p class="pub__links">
+            <a href="assets/pdf/Patent_Certificate_567962.pdf" target="_blank" rel="noopener">certificate</a>
+            <a href="https://www.bnmit.org/newgen-iedc/" target="_blank" rel="noopener">NewGen-IEDC listing</a>
+          </p>
         </div>
       </li>
 
       <li class="pub" id="venture-lifeline">
-        <div class="pub__thumb pub__thumb--placeholder"><span>LifelineERV</span></div>
+        <div class="pub__thumb pub__thumb--contain"><img src="assets/img/venture-lifeline.webp" alt="LifelineERV app icon" loading="lazy"></div>
         <div class="pub__meta">
           <p class="pub__title">LifelineERV, faster emergency-response routing</p>
           <p class="pub__authors"><strong>Ankitha Sudarshan</strong>, et&nbsp;al.</p>
           <p class="pub__venue"><span class="tag">funded venture</span> NewGen-IEDC, B.&nbsp;N.&nbsp;M. Institute of Technology &nbsp;&middot;&nbsp; 2019</p>
           <p class="pub__blurb">
-            An Android and iOS app that alerts every user within <span class="hl">200&nbsp;m</span>
-            of an approaching ambulance to clear the way, shortening transit time from the
-            patient to the hospital. Built in Android Studio and Swift.
+            An Android and iOS app that alerts every driver within <span class="hl">200&nbsp;m</span>
+            of an approaching ambulance to clear the way, cutting time to hospital.
           </p>
           <p class="pub__links"><a href="https://www.bnmit.org/newgen-iedc/" target="_blank" rel="noopener">NewGen-IEDC listing</a></p>
         </div>
@@ -287,15 +284,14 @@
   <!-- ================= EXPERIENCE & EDUCATION ================= -->
   <section id="experience">
     <h2>Experience &amp; Education</h2>
-    <ol class="timeline">
+    <ol class="timeline timeline--compact">
       <li>
         <div class="timeline__when">2024 - now</div>
         <div class="timeline__what">
           <img class="timeline__logo" src="assets/img/logo/ub.png" alt="University at Buffalo" loading="lazy">
           <div>
             <p class="timeline__role">PhD, Computer Science</p>
-            <p class="timeline__org"><a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank" rel="noopener">University at Buffalo (SUNY)</a> &nbsp;&middot;&nbsp; Advisor: Prof. Rohini Srihari</p>
-            <p class="timeline__note">Multimodal AI, 3D computer vision, fine-grained human motion evaluation. Teaching assistant for the MS course in NLP &amp; Dialogue Systems.</p>
+            <p class="timeline__org"><a href="https://engineering.buffalo.edu/computer-science-engineering.html" target="_blank" rel="noopener">University at Buffalo (SUNY)</a> &nbsp;&middot;&nbsp; Buffalo, NY</p>
           </div>
         </div>
       </li>
@@ -304,9 +300,8 @@
         <div class="timeline__what">
           <img class="timeline__logo" src="assets/img/logo/columbia.png" alt="Columbia University" loading="lazy">
           <div>
-            <p class="timeline__role">Machine Learning Summer School (MLSS NYC 2026)</p>
-            <p class="timeline__org"><a href="https://mlss.cc/" target="_blank" rel="noopener">MLSS</a> at Columbia University, with Bloomberg</p>
-            <p class="timeline__note">Selected as one of about 200 PhD researchers worldwide.</p>
+            <p class="timeline__role"><a href="https://mlss.cc/" target="_blank" rel="noopener">Machine Learning Summer School</a> (MLSS NYC 2026)</p>
+            <p class="timeline__org">Columbia University, with Bloomberg</p>
           </div>
         </div>
       </li>
@@ -317,7 +312,6 @@
           <div>
             <p class="timeline__role">MS, Computer Science</p>
             <p class="timeline__org"><a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener">Purdue University</a></p>
-            <p class="timeline__note">Research in ASR, NLP, and deep learning.</p>
           </div>
         </div>
       </li>
@@ -327,8 +321,7 @@
           <img class="timeline__logo timeline__logo--pad" src="assets/img/logo/kpmg.svg" alt="KPMG" loading="lazy">
           <div>
             <p class="timeline__role">Data Scientist</p>
-            <p class="timeline__org"><a href="https://kpmg.com/" target="_blank" rel="noopener">KPMG</a> &nbsp;&middot;&nbsp; Bengaluru, India</p>
-            <p class="timeline__note">Built and deployed &ldquo;Konversator,&rdquo; a RAG conversational-AI assistant (GPT-2 + PyTorch), for 500+ employees (<span class="hl">+23% productivity</span>), which won the inaugural KPMG firmwide hackathon across 30 teams. Also a neural account-mapping engine with KPMG Europe that cut manual mapping time to a sixth, and Python automation that halved manual effort on CAATs documentation.</p>
+            <p class="timeline__org"><a href="https://kpmg.com/" target="_blank" rel="noopener">KPMG</a> &nbsp;&middot;&nbsp; Bengaluru</p>
           </div>
         </div>
       </li>
@@ -338,8 +331,7 @@
           <span class="timeline__badge" style="--b:#1f6f5c" aria-hidden="true">G</span>
           <div>
             <p class="timeline__role">Data Scientist</p>
-            <p class="timeline__org">Graphene Health Tech &nbsp;&middot;&nbsp; Bengaluru, India</p>
-            <p class="timeline__note">NLP classification pipeline (CNN / GRU / Transformer) for social-media intelligence; 85% noise reduction, +37% pipeline throughput via LSH deduplication.</p>
+            <p class="timeline__org">Graphene Health Tech &nbsp;&middot;&nbsp; Bengaluru</p>
           </div>
         </div>
       </li>
@@ -349,8 +341,7 @@
           <img class="timeline__logo" src="assets/img/logo/bnmit.png" alt="B. N. M. Institute of Technology" loading="lazy">
           <div>
             <p class="timeline__role">B.E., Computer Science &amp; Engineering</p>
-            <p class="timeline__org"><a href="https://www.bnmit.org/" target="_blank" rel="noopener">B.&nbsp;N.&nbsp;M. Institute of Technology</a>, Visvesvaraya Technological University &nbsp;&middot;&nbsp; Bengaluru, India</p>
-            <p class="timeline__note">Undergraduate research through the campus <a href="#ventures">NewGen-IEDC</a> cell.</p>
+            <p class="timeline__org"><a href="https://www.bnmit.org/" target="_blank" rel="noopener">B.&nbsp;N.&nbsp;M. Institute of Technology</a> (VTU) &nbsp;&middot;&nbsp; Bengaluru</p>
           </div>
         </div>
       </li>
@@ -388,10 +379,14 @@
       </li>
     </ul>
 
-    <h3 class="awards__service">Academic Service</h3>
+  </section>
+
+  <!-- ================= ACADEMIC SERVICE ================= -->
+  <section id="service">
+    <h2>Academic Service</h2>
     <ul class="plain">
-      <li>Reviewer, <a href="https://neurips.cc/" target="_blank" rel="noopener">NeurIPS 2026</a> Creative AI track</li>
-      <li>Teaching assistant, MS course in NLP &amp; Dialogue Systems &nbsp;&middot;&nbsp; University at Buffalo</li>
+      <li><strong>Reviewer</strong>, <a href="https://neurips.cc/" target="_blank" rel="noopener">NeurIPS 2026</a> Creative AI track</li>
+      <li><strong>Teaching assistant</strong>, MS course in NLP &amp; Dialogue Systems &nbsp;&middot;&nbsp; University at Buffalo</li>
     </ul>
   </section>
 
