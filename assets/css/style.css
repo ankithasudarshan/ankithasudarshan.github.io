@@ -265,10 +265,15 @@ section h2 {
   }
 }
 
-/* --- nav: no name, links centred --- */
+/* --- nav: no name, links spread evenly across the content column --- */
 .nav__inner { justify-content: center; }
-.nav__links { margin: 0 auto; justify-content: center; }
-@media (max-width: 760px) { .nav__links { margin: 0; } }
+.nav__links {
+  width: 100%; max-width: 640px; margin: 0 auto;
+  justify-content: space-between; flex-wrap: nowrap;
+}
+@media (max-width: 760px) {
+  .nav__links { width: auto; max-width: none; margin: 0; justify-content: center; }
+}
 
 /* --- section headings get a colour accent --- */
 section h2 {
@@ -473,17 +478,17 @@ a.award__title:hover { color: var(--accent); text-decoration: none; }
    ============================================================ */
 .hero { padding: 60px 0 46px; align-items: flex-start; gap: 36px; }
 .hero__name  { margin: 0 0 8px; }
-.hero__title { margin: 0 0 14px; }
-.hero__bio   { margin: 0 0 18px; font-size: 15.5px; line-height: 1.7; color: var(--ink-soft); max-width: 62ch; }
+.hero__title { margin: 0 0 26px; }
+.hero__bio   { margin: 0 0 22px; font-size: 15.5px; line-height: 1.7; color: var(--ink-soft); max-width: 62ch; }
 .hero__bio strong { color: var(--ink); }
-.links { margin: 0 0 20px; }
 .hero__cta {
-  margin: 0;
+  margin: 0 0 22px;
   font-size: 14.5px; line-height: 1.6; color: var(--ink-soft);
   border-left: 2px solid var(--accent); padding-left: 13px;
   max-width: 60ch;
 }
 .hero__cta strong { color: var(--accent-ink); }
+.links { margin: 0; }
 
 /* nav is no longer the first element on the page */
 .nav { border-top: 1px solid var(--line); }
