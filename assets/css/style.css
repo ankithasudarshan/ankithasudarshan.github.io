@@ -467,3 +467,28 @@ a.award__title:hover { color: var(--accent); text-decoration: none; }
   max-width: 68ch;
 }
 .research-lead .hl { font-weight: 600; }
+
+/* ============================================================
+   v8: nav sits below the intro (still sticky); roomier hero
+   ============================================================ */
+.hero { padding: 60px 0 46px; align-items: flex-start; gap: 36px; }
+.hero__name  { margin: 0 0 8px; }
+.hero__title { margin: 0 0 14px; }
+.hero__bio   { margin: 0 0 18px; font-size: 15.5px; line-height: 1.7; color: var(--ink-soft); max-width: 62ch; }
+.hero__bio strong { color: var(--ink); }
+.links { margin: 0 0 20px; }
+.hero__cta {
+  margin: 0;
+  font-size: 14.5px; line-height: 1.6; color: var(--ink-soft);
+  border-left: 2px solid var(--accent); padding-left: 13px;
+  max-width: 60ch;
+}
+.hero__cta strong { color: var(--accent-ink); }
+
+/* nav is no longer the first element on the page */
+.nav { border-top: 1px solid var(--line); }
+main.wrap > section:first-child { border-top: 0; padding-top: 30px; }
+
+@media (max-width: 760px) {
+  .hero { padding: 40px 0 32px; gap: 20px; }
+}
